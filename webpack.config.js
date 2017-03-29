@@ -14,16 +14,11 @@ module.exports = {
         rules: [{
             test: /\.vue$/,
             loader: 'vue-loader',
-            // exclude: /node_modules/,
             options: {
                 loaders: {
                     'scss': 'vue-style-loader!css-loader!sass-loader',
                     'sass': 'vue-style-loader!css-loader!sass-loader?indentedSyntax'
-                },
-	            transformToRequire: {
-			      video: ['src','poster'],
-			      source: 'src'
-			    }
+                }
             }
         }, {
             test: /\.js$/,
@@ -41,14 +36,14 @@ module.exports = {
             test: /\.scss$/,
             loaders: ['style-loader', 'css-loader', 'sass-loader?sourceMap']
         }, {
-            test: /\.(otf|ttf)$/,
+            test: /\.(otf|ttf|woff)$/,
             loader: 'file-loader?name=fonts/[name].[ext]'
         }, {
             test: /\.(png|jpg|gif|svg)$/,
             loader: 'file-loader?name=img/[name]-[hash:7].[ext]&context=./source/img'
         }, {
         	test: /\.(mpeg|mp4|webm|ogv)$/,
-            loader: 'file-loader'
+            loader: 'file-loader?name=videos/[name].[ext]'
         }]
     },
     resolve: {
