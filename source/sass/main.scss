@@ -1,0 +1,43 @@
+/* Fonts ----------------------------------------------------- */
+
+@font-face {
+    font-family: 'Regular';
+    src: url('../fonts/SF-UI-Text-Regular.otf');
+}
+
+@font-face {
+    font-family: 'Light';
+    src: url('../fonts/SF-UI-Text-Light.otf');
+}
+
+@font-face {
+    font-family: 'Medium';
+    src: url('../fonts/SF-UI-Text-Medium.otf');
+}
+
+
+/* Shared ---------------------------------------------------- */
+
+body {
+    font-family: 'Regular';
+    min-height: 100%;
+    width: 100%;
+    font-size: 16px;
+    margin: 0;
+    
+    -webkit-user-select: none;
+    -webkit-touch-callout: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+a {
+    color: inherit;
+}

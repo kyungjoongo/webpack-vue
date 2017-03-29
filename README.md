@@ -1,10 +1,16 @@
-# webpack + vue DEMO
-> a 'simple' way to use vue
+# Webpack + Vue 
+> a quick prototyping boilerplate
 
 ## Getting Started
 
-`npm install`
+#### Installation
 
-`npm run dev`
+`yarn`
 
-`npm run build`
+#### Development
+
+`yarn start`
+
+#### To build
+
+`yarn run build`
