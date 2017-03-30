@@ -66,6 +66,9 @@ module.exports = {
     devtool: 'eval'
 }
 
+// Fix for error messages
+process.noDeprecation = true;
+
 
 if (process.env.NODE_ENV === 'production') {
     module.exports.devtool = '#source-map'
