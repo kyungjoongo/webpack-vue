@@ -1,5 +1,6 @@
 # Webpack + Vue 
-> a quick prototyping boilerplate
+
+A quick prototyping boilerplate.
 
 ## Getting Started
 
