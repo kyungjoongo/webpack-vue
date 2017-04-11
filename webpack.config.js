@@ -1,6 +1,7 @@
-var path = require('path')
-var webpack = require('webpack')
-var CopyWebpackPlugin = require('copy-webpack-plugin')
+let path = require('path'),
+    webpack = require('webpack'),
+    HtmlWebpackPlugin = require('html-webpack-plugin'),
+    FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 module.exports = {
     entry: {
@@ -63,7 +64,35 @@ module.exports = {
     performance: {
         hints: false
     },
-    devtool: 'eval'
+    devtool: 'eval',
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: 'source/index.html',
+            title: require("./package.json").title,
+            hash: true
+        }),
+        new FaviconsWebpackPlugin({
+            logo: './source/img/icon.png',
+            prefix: 'icons-[hash]/',
+            emitStats: false,
+            statsFilename: 'iconstats-[hash].json',
+            persistentCache: true,
+            inject: true,
+            title: 'Prototype',
+            icons: {
+              android: false,
+              appleIcon: true,
+              appleStartup: false,
+              coast: false,
+              favicons: true,
+              firefox: false,
+              opengraph: false,
+              twitter: false,
+              yandex: false,
+              windows: false
+            }
+          })
+    ]
 }
 
 // Fix for error messages
@@ -85,9 +114,6 @@ if (process.env.NODE_ENV === 'production') {
             compress: {
                 warnings: false
             }
-        }),
-        new CopyWebpackPlugin([
-            { from: 'index.html' },
-        ])
+        })
     ])
 }

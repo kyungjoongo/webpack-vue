@@ -4,14 +4,27 @@ A quick prototyping boilerplate.
 
 ## Getting Started
 
-#### Installation
+##### Installation
 
 `yarn`
 
-#### Development
+##### Development
 
 `yarn start`
 
-#### To build
+##### To build
 
 `yarn run build`
+
+<br/><br/>
+
+## Tips
+
+
+##### Personalise
+
+`yarn init` - update the package.json to your own values.
+
+##### Icon
+
+Edit `source/design/icon.sketch` and export to `source/img/icon.png` - all apple/favicons will be generated automatically by webpack.
