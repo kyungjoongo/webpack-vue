@@ -1,7 +1,11 @@
 let path = require('path'),
     webpack = require('webpack'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
-    FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+    FaviconsWebpackPlugin = require('favicons-webpack-plugin'),
+    FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin'),
+    notifier = require('node-notifier');
+
+var ICON = path.join(__dirname, './source/img/icon.png');
 
 module.exports = {
     entry: {
@@ -60,12 +64,28 @@ module.exports = {
         noInfo: true,
         host: '0.0.0.0',
         port: 3000,
+        quiet: true
     },
     performance: {
         hints: false
     },
     devtool: 'eval',
     plugins: [
+        new FriendlyErrorsWebpackPlugin({
+            onErrors: (severity, errors) => {
+              if (severity !== 'error') {
+                return;
+              }
+              const error = errors[0];
+              notifier.notify({
+                title: 'Error!',
+                message: severity + ': ' + error.name,
+                subtitle: error.file || '',
+                icon: ICON,
+                timeout: 2
+              });
+            }
+        }),
         new HtmlWebpackPlugin({
             template: 'source/index.html',
             title: require("./package.json").title,

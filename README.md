@@ -14,7 +14,7 @@ A quick prototyping boilerplate.
 
 ##### To build
 
-`yarn run build`
+`yarn build`
 
 <br/><br/>
 
