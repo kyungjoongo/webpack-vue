@@ -1,7 +1,9 @@
 let path = require('path'),
     webpack = require('webpack'),
+    CopyWebpackPlugin = require('copy-webpack-plugin'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     FaviconsWebpackPlugin = require('favicons-webpack-plugin'),
+    CleanWebpackPlugin = require('clean-webpack-plugin'),
     FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin'),
     notifier = require('node-notifier');
 
@@ -91,9 +93,9 @@ module.exports = {
             title: require("./package.json").title,
             hash: true
         }),
-        new FaviconsWebpackPlugin({
+         new FaviconsWebpackPlugin({
             logo: './source/img/icon.png',
-            prefix: 'icons-[hash]/',
+            prefix: 'favicon/[hash]-',
             emitStats: false,
             statsFilename: 'iconstats-[hash].json',
             persistentCache: true,
@@ -128,12 +130,19 @@ if (process.env.NODE_ENV === 'production') {
                 NODE_ENV: '"production"'
             }
         }),
+        new CleanWebpackPlugin(['www'], {
+            exclude: ['favicon']
+        }),
         new webpack.optimize.UglifyJsPlugin({
             sourceMap: true,
             comments: false,
             compress: {
                 warnings: false
             }
-        })
+        }),
+        // Required for ios add-t-home icon
+        new CopyWebpackPlugin([
+            {from: './source/server/.htaccess', to: 'favicon/'}
+        ])
     ])
 }
