@@ -72,7 +72,5 @@ Favicons for desktop and webapps are generated automatically.
 
 ## Tips
 
-
-##### Personalise
-`yarn init` - update the package.json to your own values.
+[Read some tips](docs/TIPS.markdown)
 
