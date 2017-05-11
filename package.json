@@ -1,6 +1,6 @@
 {
     "name": "webpack-vue",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "A Vue Webpack Bolierplate for prototyping",
     "main": "source/js/main.js",
     "scripts": {
@@ -11,6 +11,7 @@
         "splash": "cordova-splash --splash=source/img/splash.png",
         "cordova": "node scripts/cordova/init.js && yarn addiOS && yarn icon && yarn splash && yarn prepare",
         "addiOS": "cordova platform add ios",
+        "bump": "node scripts/cordova/versionBump.js",
         "prepare": "yarn build && cordova prepare"
     },
     "keywords": [
