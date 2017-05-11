@@ -8,6 +8,11 @@
         <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
         <meta name="apple-mobile-web-app-capable" content="yes"/>
         <meta name="format-detection" content="telephone=no"/>
+        <script type="text/javascript">
+            if(/android|ipad|iphone|ipod/i.test(navigator.userAgent.toLowerCase())){
+                document.write('<script type="text/javascript" charset="utf-8" src="cordova.js"><\/script>');
+            }
+        </script>
     </head>
     <body>
         <div id='app'></div>

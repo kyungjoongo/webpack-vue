@@ -7,7 +7,33 @@ let path = require('path'),
     FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin'),
     notifier = require('node-notifier');
 
-var ICON = path.join(__dirname, './source/img/icon.png');
+let ICON = path.join(__dirname, './source/img/icon.png');
+let NODE_ENV = process.env.NODE_ENV;
+
+var imageLoader = ['file-loader?name=img/[name]-[hash:7].[ext]'];
+// Optimize images for production build
+
+if (NODE_ENV === 'production') {
+    imageLoader.push({
+        loader: 'image-webpack-loader',
+        query: {
+            mozjpeg: {
+                progressive: true,
+            },
+            gifsicle: {
+                interlaced: false,
+            },
+            optipng: {
+                optimizationLevel: 4,
+            },
+            pngquant: {
+                quality: '75-90',
+                speed: 3,
+            },
+        },
+    });
+}
+
 
 module.exports = {
     entry: {
@@ -29,7 +55,7 @@ module.exports = {
             }
         }, {
             test: /\.js$/,
-            loader: 'babel-loader',
+            loader: 'babel-loader?cacheDirectory',
             exclude: /node_modules/,
             options: {
                 presets: ["es2015", "stage-2"],
@@ -41,6 +67,7 @@ module.exports = {
             loaders: ['style-loader', 'css-loader']
         }, {
             test: /\.scss$/,
+            exclude: /node_modules/,
             loaders: ['style-loader', 'css-loader', 'sass-loader?sourceMap']
         }, {
             test: /\.(otf|ttf|woff)$/,
@@ -49,8 +76,11 @@ module.exports = {
             test: /\.(png|jpg|gif|svg)$/,
             loader: 'file-loader?name=img/[name]-[hash:7].[ext]&context=./source/img'
         }, {
-        	test: /\.(mpeg|mp4|webm|ogv)$/,
+            test: /\.(mpeg|mp4|webm|ogv)$/,
             loader: 'file-loader?name=videos/[name].[ext]'
+        }, {
+            test: /\.(jpe?g|png|gif|svg)$/i,
+            loaders: imageLoader
         }]
     },
     resolve: {
@@ -75,25 +105,24 @@ module.exports = {
     plugins: [
         new FriendlyErrorsWebpackPlugin({
             onErrors: (severity, errors) => {
-              if (severity !== 'error') {
-                return;
-              }
-              const error = errors[0];
-              notifier.notify({
-                title: 'Error!',
-                message: severity + ': ' + error.name,
-                subtitle: error.file || '',
-                icon: ICON,
-                timeout: 2
-              });
+                if (severity !== 'error') {
+                    return;
+                }
+                const error = errors[0];
+                notifier.notify({
+                    title: 'Error!',
+                    message: severity + ': ' + error.name,
+                    subtitle: error.file || '',
+                    icon: ICON,
+                    timeout: 2
+                });
             }
         }),
         new HtmlWebpackPlugin({
             template: 'source/index.html',
-            title: require("./package.json").title,
             hash: true
         }),
-         new FaviconsWebpackPlugin({
+        new FaviconsWebpackPlugin({
             logo: './source/img/icon.png',
             prefix: 'favicon/[hash]-',
             emitStats: false,
@@ -102,18 +131,18 @@ module.exports = {
             inject: true,
             title: 'Prototype',
             icons: {
-              android: false,
-              appleIcon: true,
-              appleStartup: false,
-              coast: false,
-              favicons: true,
-              firefox: false,
-              opengraph: false,
-              twitter: false,
-              yandex: false,
-              windows: false
+                android: false,
+                appleIcon: true,
+                appleStartup: false,
+                coast: false,
+                favicons: true,
+                firefox: false,
+                opengraph: false,
+                twitter: false,
+                yandex: false,
+                windows: false
             }
-          })
+        })
     ]
 }
 
@@ -121,7 +150,7 @@ module.exports = {
 process.noDeprecation = true;
 
 
-if (process.env.NODE_ENV === 'production') {
+if (NODE_ENV === 'production') {
     module.exports.devtool = '#source-map'
         // http://vue-loader.vuejs.org/en/workflow/production.html
     module.exports.plugins = (module.exports.plugins || []).concat([
@@ -142,7 +171,22 @@ if (process.env.NODE_ENV === 'production') {
         }),
         // Required for ios add-t-home icon
         new CopyWebpackPlugin([
-            {from: './source/server/.htaccess', to: 'favicon/'}
+            { from: './source/server/.htaccess', to: 'favicon/' }
+        ])
+    ])
+}
+
+
+if (NODE_ENV === 'fast') {
+    module.exports.devtool = '#eval'
+    module.exports.plugins = (module.exports.plugins || []).concat([
+        new webpack.DefinePlugin({
+            'process.env': {
+                NODE_ENV: '"production"'
+            }
+        }),
+        new CopyWebpackPlugin([
+            { from: './source/misc/.htaccess', to: 'favicon/' }
         ])
     ])
 }
