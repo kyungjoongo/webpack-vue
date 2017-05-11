@@ -2,18 +2,18 @@
 
 A rapid prototyping boilerplate with support for Cordova.
 
-#### Installation
+#### Install
 
 ```js
 yarn init && yarn
 ```
 
-#### Development
+#### Develop
 
 ```js
 yarn start
 
-// Now open http://localhost:3000
+// Preview at localhost:3000
 ```
 
 #### Build
@@ -24,14 +24,14 @@ yarn build
 // yarn buildfast - for no compression
 ```
 
-#### Bump version number
+#### Bump
 
 ```js
-yarn bump // 0.0.1 > 0.0.2
+yarn bump // Bump version number e.g. 0.0.1 > 0.0.2
 ```
 
 <br/><br/>
-## Packaging as an iOS Cordova App
+## Make an iOS App
 
 Make sure Cordova is installed gloablly
 
@@ -57,7 +57,7 @@ Once complete, open the XCode project in `platforms/ios` and hit RUN.
 yarn buildCordova
 ```
 
-#### Icons & splash screen
+#### Icons & Splash
 
 Edit sketch files in `source/design/` and export to `source/img/`
 

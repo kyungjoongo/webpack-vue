@@ -88,7 +88,8 @@ module.exports = {
         alias: {
             'vue$': 'vue/dist/vue.common.js',
             'components': path.resolve(__dirname, 'source/components'),
-            'sass': path.resolve(__dirname, 'source/sass')
+            'sass': path.resolve(__dirname, 'source/sass'),
+            'js': path.resolve(__dirname, 'source/js')
         }
     },
     devServer: {
