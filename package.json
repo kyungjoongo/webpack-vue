@@ -1,7 +1,7 @@
 {
     "name": "webpack-vue",
-    "version": "1.0.2",
-    "description": "A Vue Webpack Bolierplate for prototyping",
+    "version": "0.0.1",
+    "description": "A Vue/Webpack/Cordova Bolierplate for prototyping",
     "main": "source/js/main.js",
     "scripts": {
         "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot ",
@@ -9,10 +9,11 @@
         "buildfast": "cross-env NODE_ENV=faste webpack --progress --hide-modules",
         "icon": "cordova-icon --icon=source/img/icon.png",
         "splash": "cordova-splash --splash=source/img/splash.png",
-        "cordova": "node scripts/cordova/init.js && yarn addiOS && yarn icon && yarn splash && yarn prepare",
+        "cordova": "node scripts/cordova/init.js && yarn build && yarn addiOS && yarn icon && yarn splash",
         "addiOS": "cordova platform add ios",
-        "bump": "node scripts/cordova/versionBump.js",
-        "prepare": "yarn build && cordova prepare"
+        "bumpCordova": "node scripts/cordova/versionBump.js $npm_package_version",
+        "bump": "npm --no-git-tag-version version patch && yarn bumpCordova",
+        "buildCordova": "yarn build && cordova prepare"
     },
     "keywords": [
         "cordova",

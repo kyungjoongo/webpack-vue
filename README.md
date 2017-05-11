@@ -1,20 +1,72 @@
 # Webpack + Vue 
 
-A quick prototyping boilerplate.
+A rapid prototyping boilerplate with support for Cordova.
 
-## Getting Started
+#### Installation
 
-##### Installation
+```js
+yarn init && yarn
+```
 
-`yarn`
+#### Development
 
-##### Development
+```js
+yarn start
 
-`yarn start`
+// Now open http://localhost:3000
+```
 
-##### To build
+#### Build
 
-`yarn build`
+```js
+yarn build
+
+// yarn buildfast - for no compression
+```
+
+#### Bump version number
+
+```js
+yarn bump // 0.0.1 > 0.0.2
+```
+
+<br/><br/>
+## Packaging as an iOS Cordova App
+
+Make sure Cordova is installed gloablly
+
+```
+yarn global add cordova@latest
+```
+
+then...
+
+```js
+yarn cordova
+
+/*
+Installs console, splash and status plugins. 
+Generates icons and splash screens.
+Once complete, open the XCode project in `platforms/ios` and hit RUN.
+*/
+```
+
+#### Build for Cordova
+
+```js
+yarn buildCordova
+```
+
+#### Icons & splash screen
+
+Edit sketch files in `source/design/` and export to `source/img/`
+
+`yarn icon` to generate the icons for your project
+
+`yarn splash` to generate the splash screens for your project
+
+Favicons for desktop and webapps are generated automatically.
+
 
 <br/><br/>
 
@@ -22,9 +74,5 @@ A quick prototyping boilerplate.
 
 
 ##### Personalise
-
 `yarn init` - update the package.json to your own values.
 
-##### Icon
-
-Edit `source/design/icon.sketch` and export to `source/img/icon.png` - all apple/favicons will be generated automatically by webpack.

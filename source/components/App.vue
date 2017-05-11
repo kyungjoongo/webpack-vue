@@ -1,29 +1,33 @@
 <template>
 	<div id="app">
 		<h1>{{ title }}</h1>
-		Webpack running + Hot Reload
+		cordovaReady: <b>{{ cordovaReady }}</b>
 	</div>
 </template>
 
+
 <script>
 	export default {
-	  name: 'app',
-	  data(){
-	  	return {
-	  		title: "Welcome!"
-	  	}
-	  },
-	  methods: {
-
-	  },
-	  computed: {
-
-	  }
-	}
+		name: "app",
+		data() {
+			return {
+				title: "Welcome!",
+				cordovaReady: false
+			};
+		},
+		methods: {},
+		computed: {},
+		mounted() {
+			document.addEventListener("deviceready", () => {
+				this.cordovaReady = true;
+			},false);
+		}
+	};
 </script>
+
 
 <style lang="scss">
 	#app{
-		padding:20px;
+		text-align: center;
 	}
 </style>

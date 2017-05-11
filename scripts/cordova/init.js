@@ -44,13 +44,13 @@ prompt.message = '';
 prompt.start();
 
 prompt.get(schema, function(err, result) {
-	renderTemplateFile('./scripts/configTemplate.xml', result)
+	renderTemplateFile(__dirname+'/configTemplate.xml', result)
 		.then(renderedString => {
 			fs.writeFile("./config.xml", renderedString, function(err){
 			    if(err) {
 			        return console.log(err);
 			    }else{
-			    	fs.copy('./hooks', '../../')
+			    	fs.copy(__dirname+'/hooks/', './hooks/')
 						.then(() => console.log('success!'))
 						.catch(err => console.error(err))
 			    }
