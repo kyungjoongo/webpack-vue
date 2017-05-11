@@ -1,6 +1,6 @@
 {
     "name": "webpack-vue",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "A Vue Webpack Bolierplate for prototyping",
     "main": "source/js/main.js",
     "scripts": {
