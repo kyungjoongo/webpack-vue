@@ -27,7 +27,11 @@
 
 
 <style lang="scss">
+
+	@import "../sass/variables";
+
 	#app{
 		text-align: center;
 	}
+	
 </style>
