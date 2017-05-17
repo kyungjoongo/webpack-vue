@@ -4,7 +4,7 @@ import App from "components/Device"; // or App
 // -- JS utilities --
 
 // Disable elastic scrolling on iOS
-// import inobounce from 'inobounce';
+import inobounce from 'inobounce';
 
 // Remove click delay on touch devices
 import FastClick from "fastclick";
