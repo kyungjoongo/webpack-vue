@@ -1,7 +1,8 @@
 # Examples
 
-To demo everything, edit __`source/components/Device.vue`__
+https://normally.github.io/webpack-vue/
 
+To demo everything, edit __`source/components/Device.vue`__
 
 
 ```js
