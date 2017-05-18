@@ -1,9 +1,9 @@
 <template>
 	<div>
-		<header @click="show('List')">
-			<div class='back' v-if="contentHeader">← Back</div>
-			<div class='title'>{{ contentHeader ? view+'.vue' : 'Examples'}}</div>
-			<div class='source' @click.stop='toggleSrc' v-if="contentHeader">src</div>
+		<header>
+			<div v-if="isContent" @click="show('List')">back</div>
+			<div class='title'>{{ title }}</div>
+			<div v-if="isContent" @click='toggleSrc'>src</div>
 		</header>
 
 		<transition :name="transition">
@@ -42,10 +42,13 @@
 		},
 		computed:{
 			transition(){
-				return this.view === 'List' ? 'slide-out' : 'slide-in'
+				return this.isContent ? 'slide-in' : 'slide-out'
 			},
-			contentHeader(){
+			isContent(){
 				return this.view !== 'List'
+			},
+			title(){
+				return this.isContent ? this.view+'.vue' : 'Examples'
 			}
 		}
 	};
@@ -56,24 +59,21 @@
 <style lang="scss" scoped>
 
 	header{
+		display: flex;
+		align-items: stretch;
 		height: 60px;
+		text-align: center;
 		color:#FFF;
 		background-color: dodgerblue;
 		line-height: 75px;
-		padding: 0 20px;
-		cursor: pointer;
-		.title{
-			position: absolute;
-			top:0;
-			left:0;
-			width: 100%;
-			text-align: center;
-			font-weight: 600;
-		}
-		.source{
-			position: absolute;
-			top:0;
-			right:20px;
+		div{
+			min-width:60px;
+			cursor: pointer;
+			&.title{
+				flex:1;
+				font-weight: 500;
+				cursor: default;
+			}
 		}
 	}
 
