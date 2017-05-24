@@ -4,8 +4,7 @@ let path = require('path'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     FaviconsWebpackPlugin = require('favicons-webpack-plugin'),
     CleanWebpackPlugin = require('clean-webpack-plugin'),
-    FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin'),
-    notifier = require('node-notifier');
+    FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin')
 
 let ICON = path.join(__dirname, './source/img/icon.png');
 let NODE_ENV = process.env.NODE_ENV;
@@ -106,21 +105,7 @@ module.exports = {
     },
     devtool: 'eval',
     plugins: [
-        new FriendlyErrorsWebpackPlugin({
-            onErrors: (severity, errors) => {
-                if (severity !== 'error') {
-                    return;
-                }
-                const error = errors[0];
-                notifier.notify({
-                    title: 'Error!',
-                    message: severity + ': ' + error.name,
-                    subtitle: error.file || '',
-                    icon: ICON,
-                    timeout: 2
-                });
-            }
-        }),
+        new FriendlyErrorsWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: 'source/index.html',
             hash: true
