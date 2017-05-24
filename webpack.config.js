@@ -98,7 +98,8 @@ module.exports = {
         noInfo: true,
         host: '0.0.0.0',
         port: 3000,
-        quiet: true
+        quiet: true,
+        overlay: true
     },
     performance: {
         hints: false
