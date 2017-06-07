@@ -81,6 +81,9 @@ module.exports = {
         }, {
             test: /\.(jpe?g|png|gif|svg)$/i,
             loaders: imageLoader
+        }, {
+            test: /\.(wav|mp3)$/,
+            loader: 'file-loader?name=sounds/[name].[ext]&context=./source/sounds'
         }]
     },
     resolve: {
@@ -174,7 +177,7 @@ if (NODE_ENV === 'fast') {
             }
         }),
         new CopyWebpackPlugin([
-            { from: './source/misc/.htaccess', to: 'favicon/' }
+            { from: './source/server/.htaccess', to: 'favicon/' }
         ])
     ])
 }
