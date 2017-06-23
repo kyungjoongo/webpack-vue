@@ -22,7 +22,7 @@ export default {
 			this.cordovaReady = true
 		}, false)
 	}
-};
+}
 </script>
 
 <style lang='scss'>

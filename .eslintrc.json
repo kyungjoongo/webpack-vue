@@ -8,9 +8,6 @@
     },
     "rules": {
         // override/add rules' settings here
-        "no-tabs": "off",
-        "import/first": "off",
-        "indent": ["error", "tab"],
-        "eol-last": "off"
+        "semi": ["error", "never"]
     }
 }
