@@ -17,35 +17,33 @@
 	</div>
 </template>
 
-
 <style lang="scss" scoped>
-
-	#example{
+#example {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	header,
+	footer {
+		height: 80px;
+		background-color: #FFF;
+		color: dodgerblue;
 		display: flex;
-		flex-direction: column;
-		align-items: stretch;
-		header, footer{
-			height: 80px;
-			background-color: #FFF;
-			color: dodgerblue;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			font-weight: 500;
-		}
-		header{
-			border-bottom: 1px solid #EEE;
-		}
-		footer{
-			border-top: 1px solid #EEE;
-			height: 60px;
-		}
-		.content{
-			flex: 1;
-			padding: 0 20px;
-			overflow-y: scroll;
- 			-webkit-overflow-scrolling: touch;
-		}
+		align-items: center;
+		justify-content: center;
+		font-weight: 500;
 	}
-
+	header {
+		border-bottom: 1px solid #EEE;
+	}
+	footer {
+		border-top: 1px solid #EEE;
+		height: 60px;
+	}
+	.content {
+		flex: 1;
+		padding: 0 20px;
+		overflow-y: scroll;
+		-webkit-overflow-scrolling: touch;
+	}
+}
 </style>

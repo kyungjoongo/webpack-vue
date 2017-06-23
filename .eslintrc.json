@@ -1,0 +1,16 @@
+{
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/recommended" // or 'plugin:vue/base'
+    ],
+    "env": {
+        "amd": true
+    },
+    "rules": {
+        // override/add rules' settings here
+        "no-tabs": "off",
+        "import/first": "off",
+        "indent": ["error", "tab"],
+        "eol-last": "off"
+    }
+}

@@ -1,11 +1,13 @@
 {
     "name": "webpack-vue",
     "version": "0.0.1",
-    "description": "A Vue/Webpack/Cordova Bolierplate for prototyping",
+    "description": "A Vue/Webpack/Cordova boilerplate for prototyping",
     "main": "source/js/main.js",
     "scripts": {
         "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot ",
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
+        "lint": "./node_modules/eslint/bin/eslint.js --ext .js,.vue,.ts source",
+        "test": "mocha --watch --compilers js:babel-core/register --recursive --reporter dot source/test",
         "buildfast": "cross-env NODE_ENV=faste webpack --progress --hide-modules",
         "icon": "cordova-icon --icon=source/img/icon.png",
         "splash": "cordova-splash --splash=source/img/splash.png",
@@ -53,13 +55,17 @@
         "webpack-dev-server": "^2.4.2"
     },
     "dependencies": {
+        "chai": "^4.0.2",
         "cordova-ios": "^4.4.0",
         "cordova-plugin-console": "^1.0.7",
         "cordova-plugin-splashscreen": "^4.0.3",
         "cordova-plugin-statusbar": "^2.2.3",
         "cordova-plugin-whitelist": "^1.3.2",
+        "eslint": "^4.0.0",
+        "eslint-plugin-vue": "beta",
         "fastclick": "^1.0.6",
         "inobounce": "^0.1.4",
+        "mocha": "^3.4.2",
         "vue": "^2.1.8",
         "vue-awesome-swiper": "^2.3.2"
     },

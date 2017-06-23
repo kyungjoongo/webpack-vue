@@ -17,40 +17,37 @@
 
 <script>
 
-	export default {
-		data(){
-			return {
-				swipeOptions: {
-					pagination: '.swiper-pagination',
-					slidesPerView: 'auto',
-					centeredSlides: true,
-					spaceBetween: 40,
-				}		
+export default {
+	data() {
+		return {
+			swipeOptions: {
+				pagination: '.swiper-pagination',
+				slidesPerView: 'auto',
+				centeredSlides: true,
+				spaceBetween: 40
 			}
 		}
 	}
+}
 
 </script>
 
-
 <style lang="scss" scoped>
-	#example{
-		.swiper{
-			position: absolute;
-			height:100%;
-			width:100%;
-			.slide{
-				background-color: #EEE;
-				top:20px;
-				width: calc(100% - 40px);
-				height: calc(100% - 60px);
-				border-radius: 10px;
-				display:flex;
-				justify-content:center;
-				align-items:center;
-			}
-		}	
+#example {
+	.swiper {
+		position: absolute;
+		height: 100%;
+		width: 100%;
+		.slide {
+			background-color: #EEE;
+			top: 20px;
+			width: calc(100% - 40px);
+			height: calc(100% - 60px);
+			border-radius: 10px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
 	}
-
-
+}
 </style>

@@ -1,37 +1,34 @@
 <template>
-	<div id="app">
+	<div id='app'>
 		<h1>{{ title }}</h1>
-		cordovaReady: <b>{{ cordovaReady }}</b>
+		cordovaReady:
+		<b>{{ cordovaReady }}</b>
 	</div>
 </template>
 
-
 <script>
-	export default {
-		name: "app",
-		data() {
-			return {
-				title: "Welcome!",
-				cordovaReady: false
-			};
-		},
-		methods: {},
-		computed: {},
-		mounted() {
-			document.addEventListener("deviceready", () => {
-				this.cordovaReady = true;
-			},false);
+export default {
+	name: 'app',
+	data() {
+		return {
+			title: 'Welcome!',
+			cordovaReady: false
 		}
-	};
+	},
+	methods: {},
+	computed: {},
+	mounted() {
+		document.addEventListener('deviceready', () => {
+			this.cordovaReady = true
+		}, false)
+	}
+};
 </script>
 
+<style lang='scss'>
+@import '../sass/variables';
 
-<style lang="scss">
-
-	@import "../sass/variables";
-
-	#app{
-		text-align: center;
-	}
-	
+#app {
+	text-align: center;
+}
 </style>

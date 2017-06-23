@@ -8,45 +8,44 @@
 			<button @click="increment">Increase</button>
 			<h2>Squared: {{ squared }} </h2>
 		</div>
-		
+
 	</div>
 </template>
 
-
 <script>
-	export default {
-		data() {
-			return {
-				title: "Welcome!",
-				counter: 0,
-				counterVisible:true
-			};
+export default {
+	data() {
+		return {
+			title: 'Welcome!',
+			counter: 0,
+			counterVisible: true
+		}
+	},
+	methods: {
+		increment() {
+			this.counter++
 		},
-		methods: {
-			increment(){
-				this.counter++;
-			},
-			decrement(){
-				this.counter--;
-			},
-			toggleCounter(){
-				this.counterVisible = !this.counterVisible;
-			}
+		decrement() {
+			this.counter--
 		},
-		computed: {
-			squared(){
-				return this.counter*this.counter;
-			}
-		},
-	};
+		toggleCounter() {
+			this.counterVisible = !this.counterVisible
+		}
+	},
+	computed: {
+		squared() {
+			return this.counter * this.counter
+		}
+	}
+}
 </script>
 
-
 <style>
-	.app{
-		text-align: center;
-	}
-	button{
-		font-size: 20px;
-	}
+.app {
+	text-align: center;
+}
+
+button {
+	font-size: 20px;
+}
 </style>
