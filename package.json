@@ -8,7 +8,7 @@
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
         "lint": "./node_modules/eslint/bin/eslint.js --ext .js,.vue,.ts source",
         "test": "mocha --watch --compilers js:babel-core/register --recursive --reporter dot source/test",
-        "buildfast": "cross-env NODE_ENV=faste webpack --progress --hide-modules",
+        "buildfast": "cross-env NODE_ENV=fast webpack --progress --hide-modules",
         "icon": "cordova-icon --icon=source/img/icon.png",
         "splash": "cordova-splash --splash=source/img/splash.png",
         "cordova": "node scripts/cordova/init.js && yarn build && yarn addiOS && yarn icon && yarn splash",
