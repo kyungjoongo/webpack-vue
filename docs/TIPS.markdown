@@ -21,7 +21,3 @@ A big example project with lots of best practices including routing is maintaine
 ### Code editor
 
 Use what you like, especially [Vim](https://media.giphy.com/media/f5BwvEFBcgzU4/giphy.gif). But [VS Code](https://code.visualstudio.com/) has a good [Vue extension](https://marketplace.visualstudio.com/items?itemName=octref.vetur).
-
-### Wrapping as a native app
-
-We have a [Cordova project](https://github.com/Normally/webpack-vue-cordova) but might merge this into the same project soon. There is also a 'Vue Native' project in progress called [Weex](https://weex.apache.org/) but it's not quite good enough to use yet.
