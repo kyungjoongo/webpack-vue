@@ -56,11 +56,6 @@
     },
     "dependencies": {
         "chai": "^4.0.2",
-        "cordova-ios": "^4.4.0",
-        "cordova-plugin-console": "^1.0.7",
-        "cordova-plugin-splashscreen": "^4.0.3",
-        "cordova-plugin-statusbar": "^2.2.3",
-        "cordova-plugin-whitelist": "^1.3.2",
         "eslint": "^4.0.0",
         "eslint-plugin-vue": "beta",
         "fastclick": "^1.0.6",
@@ -69,16 +64,11 @@
         "vue": "^2.1.8",
         "vue-awesome-swiper": "^2.3.2"
     },
-    "repository": "https://github.com/Normally/webpack-vue-cordova.git",
+    "repository": "https://github.com/Normally/webpack-vue.git",
     "cordova": {
         "plugins": {
-            "cordova-plugin-console": {},
-            "cordova-plugin-splashscreen": {},
-            "cordova-plugin-statusbar": {},
-            "cordova-plugin-whitelist": {}
         },
         "platforms": [
-            "ios"
         ]
     }
 }
