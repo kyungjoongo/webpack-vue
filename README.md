@@ -33,13 +33,19 @@ yarn bump // Bump version number e.g. 0.0.1 > 0.0.2
 <br/><br/>
 ## Make an iOS App
 
-Make sure Cordova is installed gloablly
+Make sure [Cordova](https://cordova.apache.org/) is installed gloablly
 
 ```
 yarn global add cordova@latest
 ```
 
-then...
+Make sure [ImageMagick](https://github.com/ImageMagick/ImageMagick/blob/master/Install-mac.txt) is installed for icon/splash generation
+
+```
+brew install imagemagick
+```
+
+Convert the project to a Cordova project
 
 ```js
 yarn cordova

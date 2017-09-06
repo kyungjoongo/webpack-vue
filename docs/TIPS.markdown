@@ -20,4 +20,12 @@ A big example project with lots of best practices including routing is maintaine
 
 ### Code editor
 
-Use what you like, especially [Vim](https://media.giphy.com/media/f5BwvEFBcgzU4/giphy.gif). But [VS Code](https://code.visualstudio.com/) has a good [Vue extension](https://marketplace.visualstudio.com/items?itemName=octref.vetur).
+Use what you like...
+
+[Atom](https://atom.io/), ([Vue Support](https://atom.io/packages/language-vue))
+
+[Sublime](https://www.sublimetext.com/) ([Vue Support](https://github.com/vuejs/vue-syntax-highlight)), 
+
+[Vim](https://media.giphy.com/media/f5BwvEFBcgzU4/giphy.gif), ([Vue Support](https://github.com/posva/vim-vue))
+
+[VS Code](https://code.visualstudio.com/) ([Vue Support](https://marketplace.visualstudio.com/items?itemName=octref.vetur)).
