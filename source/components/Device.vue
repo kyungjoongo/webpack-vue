@@ -9,7 +9,7 @@
 <script>
 
 import App from '../components/App'
-// import App from '../examples/App';
+// import App from '../examples/App'
 
 export default {
 	name: 'device',

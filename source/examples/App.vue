@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<header>
-			<div v-if='isContent' @click=`show('List')`>back</div>
+			<div v-if='isContent' @click="show('List')">back</div>
 			<div class='title'>{{ title }}</div>
 			<div v-if='isContent' @click='toggleSrc'>src</div>
 		</header>
@@ -19,7 +19,8 @@
 const examples = {
 	List: require('./List.vue'),
 	HeadersFooters: require('./HeadersFooters.vue'),
-	Swipers: require('./Swipers.vue')
+	Swipers: require('./Swipers.vue'),
+	Tags: require('./Tags.vue')
 }
 
 export default {
