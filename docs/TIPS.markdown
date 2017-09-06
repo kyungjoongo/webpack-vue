@@ -22,10 +22,11 @@ A big example project with lots of best practices including routing is maintaine
 
 Use what you like...
 
-[Atom](https://atom.io/), ([Vue Support](https://atom.io/packages/language-vue))
+Editor        | Vue Support 
+:------------- | :-------------
+__[Atom](https://atom.io/)__ | [Install](https://atom.io/packages/language-vue)
+__[Sublime](https://www.sublimetext.com/)__ | [Install](https://github.com/vuejs/vue-syntax-highlight)
+__[Vim](https://media.giphy.com/media/f5BwvEFBcgzU4/giphy.gif)__ | [Install](https://github.com/posva/vim-vue)
+__[VS Code](https://code.visualstudio.com/)__ | [Install](https://marketplace.visualstudio.com/items?itemName=octref.vetur)
 
-[Sublime](https://www.sublimetext.com/) ([Vue Support](https://github.com/vuejs/vue-syntax-highlight)), 
-
-[Vim](https://media.giphy.com/media/f5BwvEFBcgzU4/giphy.gif), ([Vue Support](https://github.com/posva/vim-vue))
-
-[VS Code](https://code.visualstudio.com/) ([Vue Support](https://marketplace.visualstudio.com/items?itemName=octref.vetur)).
+(but Sublime is best)
