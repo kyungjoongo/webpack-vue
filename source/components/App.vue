@@ -11,7 +11,7 @@ export default {
 	name: 'app',
 	data() {
 		return {
-			title: 'Welcome!',
+			title: 'Hello!',
 			cordovaReady: false
 		}
 	},
@@ -29,6 +29,6 @@ export default {
 @import '../sass/variables';
 
 #app {
-	text-align: center;
+	padding: 20px;
 }
 </style>

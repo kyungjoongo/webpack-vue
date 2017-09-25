@@ -1,0 +1,16 @@
+
+@include easing(slide-left) {
+    transition: all $speed ease-in-out;
+}
+
+@include transition(slide-left) {
+    @include type(start) {
+        transform: translate3d(100%, 0, 0);
+    }
+    @include type(middle) {
+        transform: translate3d(0, 0, 0);
+    }
+    @include type(end) {
+        transform: translate3d(-100%, 0, 0);
+    }
+}

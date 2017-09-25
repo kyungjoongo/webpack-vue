@@ -1,0 +1,23 @@
+@include easing(fade-pop) {
+    transition: opacity 0.35s $easeOutBack;
+    transform: translate3d(0, 0, 0);
+}
+
+
+.fade-pop-enter{
+   opacity: 0;
+}
+.fade-pop-enter-to{
+    opacity: 1;
+}
+.fade-pop-back-enter-to{
+    opacity: 1;
+}
+.fade-pop-back-leave, .fade-pop-leave{
+    transition-timing-function: $easeInBack;
+    opacity: 1;
+}
+.fade-pop-back-leave-to, .fade-pop-leave-to{
+    transition-timing-function: $easeInBack;
+    opacity: 0;
+}

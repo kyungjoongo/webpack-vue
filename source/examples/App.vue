@@ -20,7 +20,8 @@ const examples = {
 	List: require('./List.vue'),
 	HeadersFooters: require('./HeadersFooters.vue'),
 	Swipers: require('./Swipers.vue'),
-	Tags: require('./Tags.vue')
+	Tags: require('./Tags.vue'),
+	Transitions: require('./Transitions.vue')
 }
 
 export default {

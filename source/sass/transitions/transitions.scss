@@ -1,0 +1,19 @@
+$speed: .35s;
+$easeOutBack: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+$easeInBack: cubic-bezier(0.6, -0.28, 0.735, 0.045);
+
+@import "mixins";
+@import "slide-left";
+@import "slide-right";
+@import "slide-up";
+@import "slide-down";
+@import "fade";
+@import "pop";
+@import "flow-right";
+@import "flow-left";
+@import "flow-up";
+@import "flow-down";
+@import "flip-right";
+@import "flip-left";
+@import "flip-up";
+@import "flip-down";

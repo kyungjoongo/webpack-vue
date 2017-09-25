@@ -1,0 +1,16 @@
+@include easing(fade) {
+    transition: opacity $speed ease-in-out;
+    transform: translate3d(0, 0, 0);
+}
+
+@include transition(fade) {
+    @include type(start) {
+        opacity: 0;
+    }
+    @include type(middle) {
+        opacity: 1;
+    }
+    @include type(end) {
+        opacity: 0;
+    }
+}

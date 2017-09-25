@@ -1,0 +1,96 @@
+$flowSpeed: 1s;
+$flowScale: 0.75;
+
+.flow-left-back-enter-active {
+	transform: translate3d(-100%, 0, 0) scale($flowScale);
+  animation: flow-left-in $flowSpeed ease-in-out;
+}
+
+.flow-left-back-leave-active {
+  animation: flow-left-out $flowSpeed ease-in-out;
+}
+@keyframes flow-left-out {
+  0% {
+  	opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    opacity: 0.75;
+   transform: translate3d(0, 0, 0) scale($flowScale);
+  }
+  66% {
+  	opacity: 0.75;
+   transform: translate3d(100%, 0, 0) scale($flowScale);
+  }
+  100% {
+  	opacity: 0.75;
+   transform: translate3d(100%, 0, 0) scale($flowScale);
+  }
+}
+
+@keyframes flow-left-in {
+  0% {
+  	opacity: 0.75;
+    transform: translate3d(-100%, 0, 0) scale($flowScale);
+  }
+  33% {
+    opacity: 0.75;
+    transform: translate3d(-100%, 0, 0) scale($flowScale);
+  }
+  66% {
+  	opacity: 0.75;
+    transform: translate3d(0, 0, 0) scale($flowScale);
+  }
+  100% {
+  	opacity: 1;
+   transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+.flow-left-enter-active {
+  transform: translate3d(100%, 0, 0) scale($flowScale);
+  animation: flow-left-in-back $flowSpeed ease-in-out;
+}
+
+.flow-left-leave-active {
+  animation: flow-left-out-back $flowSpeed ease-in-out;
+}
+@keyframes flow-left-out-back {
+  0% {
+  	opacity: 1;
+    transform: translate3d(0, 0, 0) scale(1);
+  }
+  33% {
+    opacity: 0.75;
+   transform: translate3d(0, 0, 0) scale($flowScale);
+  }
+  66% {
+    opacity: 0.75;
+   transform: translate3d(-100%, 0, 0) scale($flowScale);
+  }
+  100% {
+  	opacity: 0.75;
+   transform: translate3d(-100%, 0, 0) scale($flowScale);
+  }
+}
+
+@keyframes flow-left-in-back {
+  0% {
+  	opacity: 0.75;
+    transform: translate3d(100%, 0, 0) scale($flowScale);
+  }
+  33% {
+    opacity: 0.75;
+    transform: translate3d(100%, 0, 0) scale($flowScale);
+  }
+  66% {
+  	opacity: 0.75;
+    transform: translate3d(0, 0, 0) scale($flowScale);
+  }
+  100% {
+  	opacity: 1;
+   transform: translate3d(0, 0, 0) scale(1);
+  }
+}
+
+

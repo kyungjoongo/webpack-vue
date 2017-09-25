@@ -1,0 +1,37 @@
+@mixin transition($name) {
+    .#{$name} {
+        @content;
+    }
+}
+
+@mixin easing($name) {
+    .#{$name}-enter-active,
+    .#{$name}-leave-active,
+    .#{$name}-back-enter-active,
+    .#{$name}-back-leave-active {
+        @content;
+    }
+}
+
+@mixin type($name) {
+    @if $name==start {
+        @at-root #{&}-enter,
+        #{&}-back-leave-to {
+            @content;
+        }
+    }
+    @else if $name==middle {
+        @at-root #{&}-enter-to,
+        #{&}-leave,
+        #{&}-back-enter-to,
+        #{&}-back-leave {
+            @content;
+        }
+    }
+    @else if $name==end {
+        @at-root #{&}-leave-to,
+        #{&}-back-enter {
+            @content;
+        }
+    }
+}

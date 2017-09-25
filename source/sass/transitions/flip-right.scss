@@ -1,0 +1,25 @@
+
+@include easing(flip-right) {
+    transition: all $speed*2 ease-in-out;
+    transform: translate3d(0, 0, 0);
+    transform-style: preserve-3d;
+    -webkit-backface-visibility: hidden;
+}
+
+@include transition(flip-right) {
+    @include type(start) {
+        transform: translate3d(0, 0, 0) rotateY(-180deg) scale(0.5);
+        z-index: 0;
+        opacity: 0.99;
+    }
+    @include type(middle) {
+        transform: translate3d(0, 0, 0) rotateY(0deg) scale(1);
+        z-index: 1;
+        opacity: 1;
+    }
+    @include type(end) {
+        transform: translate3d(0, 0, 0) rotateY(180deg) scale(0.5);
+        z-index: 0;
+        opacity: 0.99;
+    }
+}
