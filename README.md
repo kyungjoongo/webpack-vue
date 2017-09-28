@@ -21,7 +21,6 @@ yarn start
 ```js
 yarn build
 
-// yarn buildfast - for no compression
 ```
 
 #### Bump

@@ -1,8 +1,7 @@
 <template>
 	<div id='app'>
 		<h1>{{ title }}</h1>
-		cordovaReady:
-		<b>{{ cordovaReady }}</b>
+		cordovaReady: <b>{{ cordovaReady }}</b>
 	</div>
 </template>
 
@@ -17,6 +16,7 @@ export default {
 	},
 	methods: {},
 	computed: {},
+	watch: {},
 	mounted() {
 		document.addEventListener('deviceready', () => {
 			this.cordovaReady = true

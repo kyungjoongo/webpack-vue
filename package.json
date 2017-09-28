@@ -4,7 +4,7 @@
     "description": "A Vue/Webpack/Cordova boilerplate for prototyping",
     "main": "source/js/main.js",
     "scripts": {
-        "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot ",
+        "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
         "lint": "./node_modules/eslint/bin/eslint.js --ext .js,.vue,.ts source",
         "test": "mocha --watch --compilers js:babel-core/register --recursive --reporter dot source/test",
