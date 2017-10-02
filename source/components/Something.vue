@@ -1,7 +1,6 @@
 <template>
   <div id='app'>
-    <router-view></router-view>
-    <h1>{{ title }}</h1>
+    <h1>SOMETHING</h1>
     <p>
       cordovaReady:
       <b>{{ cordovaReady }}</b>

@@ -62,13 +62,13 @@
         "inobounce": "^0.1.4",
         "mocha": "^3.4.2",
         "vue": "^2.1.8",
-        "vue-awesome-swiper": "^2.3.2"
+        "vue-awesome-swiper": "^2.3.2",
+        "vue-router": "^2.7.0",
+        "vuex": "^2.4.1"
     },
     "repository": "https://github.com/Normally/webpack-vue.git",
     "cordova": {
-        "plugins": {
-        },
-        "platforms": [
-        ]
+        "plugins": {},
+        "platforms": []
     }
 }
