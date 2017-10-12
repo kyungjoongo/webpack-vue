@@ -17,6 +17,7 @@ if ('addEventListener' in document) {
 }
 
 // Vue Awesome Swiper
+import 'swiper/dist/css/swiper.css'
 import Swiper from 'vue-awesome-swiper'
 Vue.use(Swiper)
 

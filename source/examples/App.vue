@@ -15,13 +15,18 @@
 <script>
 
 // Add new examples here
+import List from './List.vue'
+import HeadersFooters from './HeadersFooters.vue'
+import Swipers from './Swipers.vue'
+import Tags from './Tags.vue'
+import Transitions from './Transitions.vue'
 
 const examples = {
-	List: require('./List.vue'),
-	HeadersFooters: require('./HeadersFooters.vue'),
-	Swipers: require('./Swipers.vue'),
-	Tags: require('./Tags.vue'),
-	Transitions: require('./Transitions.vue')
+	List: List,
+	HeadersFooters: HeadersFooters,
+	Swipers: Swipers,
+	Tags: Tags,
+	Transitions: Transitions
 }
 
 export default {
