@@ -34,8 +34,7 @@
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
-    <plugin name="cordova-plugin-console" spec="~1.0.7" />
-    <plugin name="cordova-plugin-splashscreen" spec="~4.0.3" />
-    <plugin name="cordova-plugin-statusbar" spec="~2.2.3" />
-    <engine name="ios" spec="~4.4.0" />
+    <plugin name="cordova-plugin-splashscreen" spec="~4.0.4-dev" />
+    <plugin name="cordova-plugin-statusbar" spec="~2.2.4-dev" />
+    <engine name="ios" spec="~4.5.1" />
 </widget>
