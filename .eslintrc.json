@@ -1,14 +1,13 @@
 {
-	"extends": [
-		"eslint:recommended",
-		"plugin:vue/recommended" // or 'plugin:vue/base'
-	],
-	"env": {
-		"amd": true
-	},
-	"rules": {
-		// override/add rules' settings here
-		"semi": ["error", "never"],
-		"indent": ["error", "tab"]
-	}
+    "extends": [
+        "eslint:recommended",
+        "plugin:vue/recommended" // or 'plugin:vue/base'
+    ],
+    "env": {
+        "amd": true
+    },
+    "rules": {
+        // override/add rules' settings here
+        "semi": ["error", "never"]
+    }
 }
