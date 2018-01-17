@@ -63,7 +63,8 @@
         "inobounce": "0.1.5",
         "mocha": "^4.0.1",
         "vue": "2.4.4",
-        "vue-awesome-swiper": "2.6.7"
+        "vue-awesome-swiper": "2.6.7",
+        "vue-device": "^0.5.3"
     },
     "repository": "https://github.com/Normally/webpack-vue.git",
     "cordova": {

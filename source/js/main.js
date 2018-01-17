@@ -1,5 +1,5 @@
 import Vue from 'vue'
-import App from 'components/Device' // or App
+import App from 'components/App'
 
 import 'sass/global' // Import global styles
 import 'inobounce' // Disable elastic scrolling on iOS

@@ -1020,6 +1020,10 @@ boom@5.x.x:
   dependencies:
     hoek "4.x.x"
 
+bowser@^1.8.1:
+  version "1.9.1"
+  resolved "https://registry.yarnpkg.com/bowser/-/bowser-1.9.1.tgz#f86ef2132e8cb10b3eb6ea5af018758c587020db"
+
 brace-expansion@^1.1.7:
   version "1.1.8"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.8.tgz#c07b211c7c952ec1f8efd51a77ef0d1d3990a292"
@@ -6994,6 +6998,12 @@ vue-awesome-swiper@2.6.7:
   resolved "https://registry.yarnpkg.com/vue-awesome-swiper/-/vue-awesome-swiper-2.6.7.tgz#23b12cf107503305c267df3c7c2903fb39896cd0"
   dependencies:
     swiper "^3.4.2"
+
+vue-device@^0.5.3:
+  version "0.5.3"
+  resolved "https://registry.yarnpkg.com/vue-device/-/vue-device-0.5.3.tgz#0def6f94013abeab68246a62f96194591de696a0"
+  dependencies:
+    bowser "^1.8.1"
 
 vue-eslint-parser@^2.0.1-beta.1:
   version "2.0.1-beta.1"
