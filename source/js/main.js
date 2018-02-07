@@ -1,5 +1,8 @@
 import Vue from 'vue'
-import App from 'components/App'
+import App from 'layouts/default' // './examples/App'
+
+import router from './router'
+import store from './store'
 
 import 'sass/global' // Import global styles
 import 'inobounce' // Disable elastic scrolling on iOS
@@ -34,6 +37,8 @@ void new Vue({
 	el: '#app',
 	template: '<App/>',
 	components: { App },
+	router,
+	store,
 	data: {
 		bus: bus
 	}

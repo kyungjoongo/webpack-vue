@@ -64,7 +64,9 @@
         "mocha": "^5.0.0",
         "vue": "2.5.13",
         "vue-awesome-swiper": "3.1.2",
-        "vue-device": "^0.5.3"
+        "vue-device": "^0.5.3",
+        "vue-router": "^3.0.1",
+        "vuex": "^3.0.1"
     },
     "repository": "https://github.com/Normally/webpack-vue.git",
     "cordova": {

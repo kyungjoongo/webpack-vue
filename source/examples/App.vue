@@ -2,8 +2,10 @@
 	<device>
 		<header>
 			<div v-if='isContent' @click="show('List')">back</div>
+			<div v-if='!isContent' @click="$router.push('/')">../</div>
 			<div class='title'>{{ title }}</div>
 			<div v-if='isContent' @click='toggleSrc'>src</div>
+			<div v-if='!isContent'></div>
 		</header>
 
 		<transition :name='transition'>
@@ -17,8 +19,11 @@
 import device from 'vue-device'
 
 // Add new examples here
+
 import List from './List.vue'
 import HeadersFooters from './HeadersFooters.vue'
+import Router from './Router.vue'
+import Store from './Store.vue'
 import Swipers from './Swipers.vue'
 import Tags from './Tags.vue'
 import Transitions from './Transitions.vue'
@@ -26,6 +31,8 @@ import Transitions from './Transitions.vue'
 const examples = {
 	List: List,
 	HeadersFooters: HeadersFooters,
+	Router: Router,
+	Store: Store,
 	Swipers: Swipers,
 	Tags: Tags,
 	Transitions: Transitions

@@ -98,6 +98,7 @@ module.exports = {
     alias: {
       vue$: "vue/dist/vue.common.js",
       components: path.resolve(__dirname, "source/components"),
+      layouts: path.resolve(__dirname, "source/layouts"),
       views: path.resolve(__dirname, "source/views"),
       sass: path.resolve(__dirname, "source/sass"),
       js: path.resolve(__dirname, "source/js")

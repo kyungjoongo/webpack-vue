@@ -1,8 +1,8 @@
 <template>
 	<device>
-		<div id="app">
+		<div id="home">
 			<h1>{{ title }}</h1>
-			cordovaReady: <b>{{ cordovaReady }}</b>
+			<router-link to="/examples">Examples</router-link>
 		</div>
 	</device>
 </template>
@@ -12,13 +12,13 @@
 import device from 'vue-device'
 
 export default {
-	name: 'app',
+	name: 'home',
 	components: {
 		device
 	},
 	data() {
 		return {
-			title: 'Hello!',
+			title: 'Hello World!',
 			cordovaReady: false
 		}
 	},
@@ -35,7 +35,7 @@ export default {
 
 <style lang='scss'>
 	@import '../sass/variables';
-	#app {
+	#home {
 		padding: 20px;
 	}
 </style>
