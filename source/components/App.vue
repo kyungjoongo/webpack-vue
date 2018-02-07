@@ -1,12 +1,10 @@
 <template>
-	<div>
-		<device background='#FFF'>
-			<div id="app">
-				<h1>{{ title }}</h1>
-				cordovaReady: <b>{{ cordovaReady }}</b>
-			</div>
-		</device>
-	</div>
+	<device>
+		<div id="app">
+			<h1>{{ title }}</h1>
+			cordovaReady: <b>{{ cordovaReady }}</b>
+		</div>
+	</device>
 </template>
 
 <script>

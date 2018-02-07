@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<device>
 		<header>
 			<div v-if='isContent' @click="show('List')">back</div>
 			<div class='title'>{{ title }}</div>
@@ -9,10 +9,12 @@
 		<transition :name='transition'>
 			<component :is='view' @onTap='show' :list='list' class='page'></component>
 		</transition>
-	</div>
+	</device>
 </template>
 
 <script>
+
+import device from 'vue-device'
 
 // Add new examples here
 import List from './List.vue'
@@ -31,7 +33,10 @@ const examples = {
 
 export default {
 	name: 'examples',
-	components: examples,
+	components: {
+		device,
+		...examples
+	},
 	data() {
 		return {
 			list: Object.keys(examples).slice(1),
