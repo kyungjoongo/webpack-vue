@@ -7,6 +7,7 @@
         "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot",
         "build": "cross-env NODE_ENV=production webpack --progress --hide-modules",
         "lint": "./node_modules/eslint/bin/eslint.js --ext .js,.vue,.ts source",
+        "pretty": "prettier --list-different --write 'source/**/*.{js,vue,sass,css}'",
         "test": "mocha --watch --compilers js:babel-core/register --recursive --reporter dot source/test",
         "buildfast": "cross-env NODE_ENV=fast webpack --progress --hide-modules",
         "icon": "cordova-icon --icon=source/img/icon.png",
@@ -17,12 +18,7 @@
         "bump": "npm --no-git-tag-version version patch && yarn bumpCordova",
         "buildCordova": "yarn build && cordova prepare"
     },
-    "keywords": [
-        "cordova",
-        "webpack",
-        "vue",
-        "boilerplate"
-    ],
+    "keywords": ["cordova", "webpack", "vue", "boilerplate"],
     "author": "Normally",
     "license": "ISC",
     "devDependencies": {
@@ -44,6 +40,7 @@
         "html-webpack-plugin": "2.30.1",
         "image-webpack-loader": "4.0.0",
         "node-sass": "4.7.2",
+        "prettier": "^1.10.2",
         "prompt": "^1.0.0",
         "sass-loader": "6.0.6",
         "style-loader": "^0.20.1",

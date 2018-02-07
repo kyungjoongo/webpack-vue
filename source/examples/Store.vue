@@ -10,12 +10,10 @@
 </template>
 
 <script>
-
-
 export default {
 	name: 'store',
 	computed: {
-		count(){
+		count() {
 			return this.$store.state.count
 		}
 	}
@@ -23,18 +21,18 @@ export default {
 </script>
 <style scoped lang="scss">
 @import '../sass/variables';
-#store{
+#store {
 	padding: 20px;
-	button{
+	button {
 		appearance: none;
 		width: 100%;
-		height:60px;
+		height: 60px;
 		margin-bottom: 10px;
 		background: $olive;
-		color:#FFF;
+		color: #fff;
 		font-size: 1em;
-		outline:0;
-		border:0;
+		outline: 0;
+		border: 0;
 		border-radius: 4px;
 		cursor: pointer;
 	}

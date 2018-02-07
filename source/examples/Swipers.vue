@@ -16,7 +16,6 @@
 </template>
 
 <script>
-
 export default {
 	data() {
 		return {
@@ -29,7 +28,6 @@ export default {
 		}
 	}
 }
-
 </script>
 
 <style lang="scss" scoped>
@@ -39,7 +37,7 @@ export default {
 		height: 100%;
 		width: 100%;
 		.slide {
-			background-color: #EEE;
+			background-color: #eee;
 			top: 20px;
 			width: calc(100% - 40px);
 			height: calc(100% - 60px);

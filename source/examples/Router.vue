@@ -9,8 +9,8 @@
 export default {
 	name: 'router',
 	methods: {
-		active(path){
-			return this.$route.path===path
+		active(path) {
+			return this.$route.path === path
 		}
 	}
 }
@@ -18,22 +18,22 @@ export default {
 
 <style scoped lang="scss">
 @import '../sass/variables';
-#router{
-	.button{
+#router {
+	.button {
 		appearance: none;
 		display: inline-block;
-		height:60px;
+		height: 60px;
 		line-height: 60px;
 		width: 50%;
 		text-align: center;
-		background: #CCC;
+		background: #ccc;
 		font-size: 1em;
-		outline:0;
-		border:0;
+		outline: 0;
+		border: 0;
 		padding: 0 20px;
 		text-decoration: none;
-		&.active{
-			background: #FFF;
+		&.active {
+			background: #fff;
 		}
 	}
 }

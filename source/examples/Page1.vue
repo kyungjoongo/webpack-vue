@@ -6,9 +6,9 @@
 
 <style lang="scss" scoped>
 @import '../sass/variables';
-#page{
+#page {
 	background: $red;
-	color:#FFF;
+	color: #fff;
 	padding: 20px;
 	height: 100%;
 }

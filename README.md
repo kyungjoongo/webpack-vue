@@ -1,7 +1,6 @@
-# Webpack + Vue 
+# Webpack + Vue
 
 A rapid prototyping boilerplate with support for Cordova.
-
 
 #### Clone
 
@@ -29,16 +28,10 @@ yarn start
 yarn build
 
 // Creates www folder with compiled code
-
-```
-
-#### Bump
-
-```js
-yarn bump // Bump version number e.g. 0.0.1 > 0.0.2
 ```
 
 <br/><br/>
+
 ## Make an iOS App
 
 Make sure [Cordova](https://cordova.apache.org/) is installed gloablly
@@ -59,7 +52,7 @@ Convert the project to a Cordova project
 yarn cordova
 
 /*
-Installs console, splash and status plugins. 
+Installs console, splash and status plugins.
 Generates icons and splash screens.
 Once complete, open the XCode project in `platforms/ios` and hit RUN.
 */
@@ -69,6 +62,12 @@ Once complete, open the XCode project in `platforms/ios` and hit RUN.
 
 ```js
 yarn buildCordova
+```
+
+#### Bump
+
+```js
+yarn bump // Bump version number e.g. 0.0.1 > 0.0.2
 ```
 
 #### Icons & Splash
@@ -81,13 +80,13 @@ Edit sketch files in `source/design/` and export to `source/img/`
 
 Favicons for desktop and webapps are generated automatically.
 
-
 <br/><br/>
 
 ## Tips
 
+This boilerplate uses [Prettier](https://prettier.io/) - _You press save and code is formatted_. Please [integrate](https://prettier.io/docs/en/editors.html) it with your editor. Or run `yarn pretty` which will format all of your `.js`, `.vue`, `.scss` and `.css` files.
+
 [Read some tips](docs/TIPS.markdown)
 
 There is an [examples](source/examples) folder, check it out.<br/>
-Or view a demo here https://normally.github.io/webpack-vue/ 
-
+Or view a demo here https://normally.github.io/webpack-vue/

@@ -18,13 +18,11 @@
 </template>
 
 <script>
-
-import tags from "./tags.js"
+import tags from './tags.js'
 
 export default {
 	name: 'tags',
-	components: {
-	},
+	components: {},
 	data() {
 		return {
 			tags: this.clone(tags),
@@ -34,41 +32,41 @@ export default {
 		}
 	},
 	methods: {
-		clone(value){
-			return JSON.parse(JSON.stringify(value));
+		clone(value) {
+			return JSON.parse(JSON.stringify(value))
 		},
-		activate(tag){
+		activate(tag) {
 			tag.active = !tag.active
 		},
-		clean(){
+		clean() {
 			// Get the chosen items and add to a new group
-			var count = 0;
-			for(var i in this.group){
-				if(!this.group[i].active){
+			var count = 0
+			for (var i in this.group) {
+				if (!this.group[i].active) {
 					this.$delete(this.group, i)
-				}else{
-					count++;
+				} else {
+					count++
 				}
 			}
-			return count;
+			return count
 		},
-		refresh(){
+		refresh() {
 			var count = this.clean()
-			for(var i = 0 ; i < this.totalTags-count && i < this.tags.length ; i++){
-				var index = Math.floor(Math.random()*this.tags.length)
+			for (var i = 0; i < this.totalTags - count && i < this.tags.length; i++) {
+				var index = Math.floor(Math.random() * this.tags.length)
 				var item = this.tags.splice(index, 1)[0]
-				this.$set(this.group, item, {active:false})
+				this.$set(this.group, item, { active: false })
 			}
 		},
-		reset(){
-			this.group = {};
-			this.tags = this.clone(tags);
-			this.isDone = false;
+		reset() {
+			this.group = {}
+			this.tags = this.clone(tags)
+			this.isDone = false
 			this.refresh()
 		},
-		done(){
+		done() {
 			this.clean()
-			this.isDone = true;
+			this.isDone = true
 		}
 	},
 	computed: {},
@@ -84,78 +82,80 @@ export default {
 #tags {
 	text-align: left;
 	position: relative;
-	padding:30px;
-	padding-top:0;
-	min-height:450px;
-	h2, h3{
-		padding:0;
-		margin:0;
+	padding: 30px;
+	padding-top: 0;
+	min-height: 450px;
+	h2,
+	h3 {
+		padding: 0;
+		margin: 0;
 		font-weight: normal;
 	}
-	h3{
-		color:#999;
+	h3 {
+		color: #999;
 	}
-	.tag{
-		padding:10px 20px;
+	.tag {
+		padding: 10px 20px;
 		margin-right: 5px;
 		margin-bottom: 5px;
-		border:1px solid dodgerblue;
+		border: 1px solid dodgerblue;
 		border-radius: 100px;
 		display: inline-block;
 		cursor: pointer;
 		transition: transform 0.3s ease-in-out;
 		color: dodgerblue;
-		&:hover{
+		&:hover {
 			background: rgba(dodgerblue, 0.1);
 		}
-		&.active{
+		&.active {
 			background: dodgerblue;
-			color: #FFF;
+			color: #fff;
 		}
 	}
-	.done{
+	.done {
 		position: absolute;
-		left:20px;
-		bottom:20px;
+		left: 20px;
+		bottom: 20px;
 		opacity: 0.2;
-		&:hover{
+		&:hover {
 			opacity: 0.5;
 		}
 	}
-	.refresh{
+	.refresh {
 		text-decoration: none;
 		font-weight: bold;
 	}
-	.buttons{
-		margin-top:20px;
+	.buttons {
+		margin-top: 20px;
 		position: absolute;
-		bottom:30px;
-		left:30px;
+		bottom: 30px;
+		left: 30px;
 		width: 100%;
-		.button{
+		.button {
 			display: inline-block;
-			border:2px solid #666;
-			color:#666;
+			border: 2px solid #666;
+			color: #666;
 			font-weight: bold;
-			width:80px;
-			height:40px;
+			width: 80px;
+			height: 40px;
 			text-align: center;
 			line-height: 35px;
 			border-radius: 4px;
 			text-decoration: none;
-			&:first-child{
+			&:first-child {
 				margin-right: 10px;
 			}
 		}
 	}
 }
 
-.zoom-enter, .zoom-leave-to {
-  opacity: 0;
-  transform: scale(0)
+.zoom-enter,
+.zoom-leave-to {
+	opacity: 0;
+	transform: scale(0);
 }
-.zoom-leave-active{
-  position: absolute;
-  opacity: 0;
+.zoom-leave-active {
+	position: absolute;
+	opacity: 0;
 }
 </style>

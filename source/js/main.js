@@ -12,7 +12,7 @@ import FastClick from 'fastclick'
 if ('addEventListener' in document) {
 	document.addEventListener(
 		'DOMContentLoaded',
-		function () {
+		function() {
 			FastClick.attach(document.body)
 		},
 		false
@@ -26,7 +26,7 @@ Vue.use(Swiper)
 
 // Event Bus
 Object.defineProperty(Vue.prototype, '$bus', {
-	get () {
+	get() {
 		return this.$root.bus
 	}
 })

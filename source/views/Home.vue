@@ -8,7 +8,6 @@
 </template>
 
 <script>
-
 import device from 'vue-device'
 
 export default {
@@ -26,16 +25,20 @@ export default {
 	computed: {},
 	watch: {},
 	mounted() {
-		document.addEventListener('deviceready', () => {
-			this.cordovaReady = true
-		}, false)
+		document.addEventListener(
+			'deviceready',
+			() => {
+				this.cordovaReady = true
+			},
+			false
+		)
 	}
 }
 </script>
 
 <style lang='scss'>
-	@import '../sass/variables';
-	#home {
-		padding: 20px;
-	}
+@import '../sass/variables';
+#home {
+	padding: 20px;
+}
 </style>

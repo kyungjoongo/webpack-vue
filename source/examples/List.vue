@@ -7,7 +7,6 @@
 </template>
 
 <script>
-
 export default {
 	name: 'list',
 	props: ['list'],
@@ -17,7 +16,6 @@ export default {
 		}
 	}
 }
-
 </script>
 
 <style lang='scss' scoped>
@@ -25,12 +23,12 @@ export default {
 	div {
 		height: 60px;
 		line-height: 60px;
-		border-bottom: 1px solid #EEE;
+		border-bottom: 1px solid #eee;
 		padding: 0 20px;
 		position: relative;
 		cursor: pointer;
 		&:active {
-			background-color: #EEE;
+			background-color: #eee;
 		}
 		&:after {
 			content: '';
