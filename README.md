@@ -2,6 +2,10 @@
 
 A rapid prototyping boilerplate with support for Cordova.
 
+| **Deprecation notice:** Please use [vue-template](https://github.com/Normally/vue-template) instead |
+| :-------------------------------------------------------------------------------------------------- |
+
+
 #### Clone
 
 ```
